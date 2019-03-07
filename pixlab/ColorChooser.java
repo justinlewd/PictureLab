@@ -9,6 +9,8 @@ import java.awt.Color;
  * 
  * @author Barb Ericson ericson@cc.gatech.edu
  */
+import javax.swing.UIManager;
+import java.awt.Dimension;
 public class ColorChooser 
 {
   
@@ -38,6 +40,9 @@ public class ColorChooser
   {
     Color pickedColor = ColorChooser.pickAColor();
     System.out.println(pickedColor);
+    int length = 60;
+UIManager.put("ColorChooser.swatchesRecentSwatchSize", new Dimension(length, length));
+UIManager.put("ColorChooser.swatchesSwatchSize", new Dimension(length, length));
   }
   
 }
