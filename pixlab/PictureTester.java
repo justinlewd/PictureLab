@@ -36,10 +36,18 @@ public class PictureTester
   
   public static void testMirrorHorizontal()
   {
-    Picture caterpillar = new Picture("caterpillar.jpg");
-    caterpillar.explore();
-    caterpillar.mirrorHorizontal();
-    caterpillar.explore();
+    Picture redMotorcycle = new Picture("redMotorcycle.jpg");
+    redMotorcycle.explore();
+    redMotorcycle.mirrorHorizontal();
+    redMotorcycle.explore();
+  }
+  
+  public static void testmirrorHorizontalBotToTop()
+  {
+    Picture redMotorcycle = new Picture("redMotorcycle.jpg");
+    redMotorcycle.explore();
+    redMotorcycle.mirrorHorizontal();
+    redMotorcycle.explore();
   }
   
   /** Method to test mirrorTemple */
@@ -81,8 +89,24 @@ public class PictureTester
    
    beach.explore();
    beach.negate();
-   beach.explore();
   }  
+  
+    public static void testGrayscale() 
+  {
+      Picture beach = new Picture("beach.jpg");
+      
+      beach.grayscale();
+      beach.explore();
+  }
+  
+    public static void fixUnderwater()
+  {
+      Picture water = new Picture("water.jpg");
+      
+      water.fixUnderwater();
+      water.explore();
+    }
+
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -96,16 +120,17 @@ public class PictureTester
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     testNegate();
-    //testGrayscale();
+    testGrayscale();
     //testFixUnderwater();
     testMirrorVertical();
-    //testMirrorTemple();
+    testMirrorVerticalRightToLeft();
+    testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    testCollage();
     //testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
