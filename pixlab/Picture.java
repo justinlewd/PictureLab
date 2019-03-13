@@ -180,6 +180,68 @@ public void keepOnlyBlue()
             }
 }
 
+    public void mirrorDiagonal()
+ {
+     Pixel[][] pixels = this.getPixels2D();
+     Pixel leftPixel = null;
+     Pixel rightPixel = null;
+     int max = pixels.length;
+     if (pixels[0].length < max)
+     max = pixels[0].length;
+     for (int row = 1; row < max; row++)
+     {
+     for (int col = 0; col < row; col++)
+     {
+         leftPixel = pixels[row][col];
+         rightPixel = pixels[col][row];
+         rightPixel.setColor(leftPixel.getColor());
+    }
+     }
+        }
+        
+  public void mirrorArms()
+ {
+     Pixel topPixel = null;
+     Pixel botPixel = null;
+     Pixel[][] pixels = this.getPixels2D();
+
+    for (int row = 155; row < 191; row++)
+        {
+            for (int col = 98; col < 169; col++)
+              {
+                  topPixel = pixels[row][col];
+                  botPixel = pixels[191-row+191][col];
+                  botPixel.setColor(topPixel.getColor());
+                }
+            }
+    for (int row = 155; row < 191; row++)
+        {
+            for (int col = 238; col < 296; col++)
+            {
+     topPixel = pixels[row][col];
+     botPixel = pixels[191-row+191][col];
+     botPixel.setColor(topPixel.getColor());
+    }
+    }
+ }
+ 
+ public void mirrorGull()
+ {
+     int mirrorPoint = 350;
+        Pixel leftPixel = null;
+        Pixel rightPixel = null;
+        Pixel[][] pixels = this.getPixels2D();
+ for (int row = 225; row < 332; row++)
+    {
+        for (int col = 219; col < mirrorPoint; col++)
+ {
+     leftPixel = pixels[row][col];
+     rightPixel = pixels[row][mirrorPoint - col +
+     mirrorPoint];
+     rightPixel.setColor(leftPixel.getColor());
+ }
+ }
+}
 
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture

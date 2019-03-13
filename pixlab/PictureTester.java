@@ -50,6 +50,27 @@ public class PictureTester
     redMotorcycle.explore();
   }
   
+  public static void mirrorDiagonal()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.mirrorDiagonal();
+    beach.explore();
+  }
+  
+  public static void mirrorArms()
+  {
+   Picture snowman = new Picture("snowman.jpg");
+   snowman.mirrorArms();
+   snowman.explore();
+  }
+  
+  public static void mirrorGull()
+  {
+   Picture seagull = new Picture("seagull.jpg");
+   seagull.mirrorGull();
+   seagull.explore();
+  }
+  
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -91,21 +112,21 @@ public class PictureTester
    beach.negate();
   }  
   
-    public static void testGrayscale() 
+  public static void testGrayscale() 
   {
-      Picture beach = new Picture("beach.jpg");
+    Picture beach = new Picture("beach.jpg");
       
-      beach.grayscale();
-      beach.explore();
+    beach.grayscale();
+    beach.explore();
   }
   
-    public static void fixUnderwater()
+  public static void fixUnderwater()
   {
-      Picture water = new Picture("water.jpg");
+    Picture water = new Picture("water.jpg");
       
-      water.fixUnderwater();
-      water.explore();
-    }
+    water.fixUnderwater();
+    water.explore();
+  }
 
   
   /** Main method for testing.  Every class can have a main
