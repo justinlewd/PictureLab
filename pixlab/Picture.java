@@ -205,18 +205,18 @@ public void keepOnlyBlue()
      Pixel botPixel = null;
      Pixel[][] pixels = this.getPixels2D();
 
-    for (int row = 155; row < 191; row++)
+    for (int row = 155; row < 190; row++)
         {
-            for (int col = 98; col < 169; col++)
+            for (int col = 98; col < 168; col++)
               {
                   topPixel = pixels[row][col];
                   botPixel = pixels[191-row+191][col];
                   botPixel.setColor(topPixel.getColor());
                 }
             }
-    for (int row = 155; row < 191; row++)
+    for (int row = 155; row < 190; row++)
         {
-            for (int col = 238; col < 296; col++)
+            for (int col = 240; col < 295; col++)
             {
      topPixel = pixels[row][col];
      botPixel = pixels[191-row+191][col];
@@ -231,9 +231,9 @@ public void keepOnlyBlue()
         Pixel leftPixel = null;
         Pixel rightPixel = null;
         Pixel[][] pixels = this.getPixels2D();
- for (int row = 225; row < 332; row++)
+ for (int row = 225; row < 331; row++)
     {
-        for (int col = 219; col < mirrorPoint; col++)
+        for (int col = 220; col < mirrorPoint; col++)
  {
      leftPixel = pixels[row][col];
      rightPixel = pixels[row][mirrorPoint - col +
@@ -272,11 +272,9 @@ public void keepOnlyBlue()
     Pixel rightPixel = null;
     int count = 0;
     Pixel[][] pixels = this.getPixels2D();
-    
-    // loop through the rows
-    for (int row = 27; row < 97; row++)
+ 
+    for (int row = 27; row < 98; row++)
     {
-      // loop from 13 to just before the mirror point
       for (int col = 13; col < mirrorPoint; col++)
       {
         
@@ -324,11 +322,14 @@ public void keepOnlyBlue()
   {
     Picture flower1 = new Picture("flower1.jpg");
     Picture flower2 = new Picture("flower2.jpg");
+    
     this.copy(flower1,0,0);
     this.copy(flower2,100,0);
     this.copy(flower1,200,0);
+    
     Picture flowerNoBlue = new Picture(flower2);
     flowerNoBlue.zeroBlue();
+    
     this.copy(flowerNoBlue,300,0);
     this.copy(flower1,400,0);
     this.copy(flower2,500,0);
