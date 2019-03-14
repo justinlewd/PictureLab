@@ -126,6 +126,14 @@ public class PictureTester
     water.fixUnderwater();
     water.explore();
   }
+  
+  public static void testCopy()
+  {
+    Picture ocean = new Picture("beach.jpg");
+    Picture daddy = new Picture("snowman.jpg");
+    ocean.copy(daddy, 10, 10);
+    ocean.explore();
+  }
 
   
   /** Main method for testing.  Every class can have a main
@@ -149,7 +157,7 @@ public class PictureTester
     //testMirrorGull();
     //testMirrorDiagonal();
     testCollage();
-    //testCopy();
+    testCopy();
     testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
